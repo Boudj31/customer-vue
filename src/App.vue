@@ -1,31 +1,28 @@
 <script>
-import Menu from '@/components/Menu.vue';
+import Menu from "@/components/Menu.vue";
+import { Toaster } from "vue-sonner";
 export default {
   name: "App",
-  // propriete reactive 
+  // propriete reactive
   data() {
-    return {
-
-    }
+    return {};
   },
-  components: {Menu},
-  // propriété calculé 
-  computed : {
-
-  },
-  methods: {
-
-  }
-}
+  components: { Menu, Toaster },
+  // propriété calculé
+  computed: {},
+  methods: {},
+};
 </script>
 
 <template>
   <div>
-     <!-- Navbar-->
-     <Menu />
-  <!-- ROUTERView -->
-  <RouterView />
+    <Toaster theme="light" position="bottom-right" />
+    <!-- Navbar-->
+    <Menu />
+    <!-- ROUTERView -->
 
+    <div class="container mx-auto px-3">
+      <RouterView />
+    </div>
   </div>
- 
 </template>
